@@ -9,7 +9,7 @@
 <meta name="description" content="رامي المغربي للنظارات الطبية والشمسية - العامرية، شارع مسجد الشرقاوي">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Lalezar&family=Anton&family=Kaushan+Script&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Lalezar&display=swap" rel="stylesheet">
 <style>
   :root {
     box-sizing: border-box;
@@ -63,6 +63,9 @@
     transform-origin: center center;
     will-change: transform;
   }
+  .hero-info { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; text-align: right; }
+  .taglines { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .tag2 { margin: 0; font-size: 18px; font-weight: 600; }
 
   /* =============== WHITE SIDE =============== */
   .info {
@@ -142,7 +145,7 @@
     background: var(--blue); color: #fff;
     border-radius: 40px;
     padding: 48px;
-    display: flex; flex-direction: column; justify-content: space-between; gap: 34px;
+    display: flex; flex-direction: column; justify-content: center; gap: 40px;
     position: relative; overflow: hidden;
   }
   .brand > * { position: relative; z-index: 1; }
@@ -165,16 +168,6 @@
     text-align: center; font-weight: 700; font-size: 18px; line-height: 1.3;
   }
   .cats svg { width: 78px; height: 43px; color: #fff; }
-
-  .brands {
-    direction: ltr; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 34px;
-    border-top: 1.5px solid var(--tile-line); padding-top: 22px;
-  }
-  .brands > span { line-height: 1; white-space: nowrap; }
-  /* خطوط ويب (بتنزّل من جوجل) عشان أسماء الماركات تطلع بنفس الشكل على كل الأجهزة */
-  .b-diesel { font-family: "Anton", "Arial Black", Impact, Arial, sans-serif; font-weight: 400; font-size: 30px; letter-spacing: .02em; }
-  .b-rayban { font-family: "Kaushan Script", "Brush Script MT", cursive; font-weight: 400; font-size: 34px; }
-  .b-persol { font-family: "Playfair Display", Georgia, "Times New Roman", serif; font-weight: 700; font-size: 26px; letter-spacing: .2em; }
 
   .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .cred { display: flex; align-items: center; gap: 12px; }
@@ -209,10 +202,6 @@
     .cred { gap: 8px; }
     .cred small { font-size: 10.5px; }
     .cred b { font-size: clamp(12px, 3vw, 13.5px); }
-    .brands { gap: 8px 22px; padding-top: 13px; }
-    .b-diesel { font-size: 22px; }
-    .b-rayban { font-size: 26px; }
-    .b-persol { font-size: 18px; letter-spacing: .16em; }
     .bg-frame { width: 104%; left: -2%; bottom: -4%; }
 
     .info { padding: 22px 16px 26px; gap: 14px; }
@@ -232,10 +221,6 @@
     .logo { font-size: 38px; }
     .cats li { font-size: 11px; }
     .creds { grid-template-columns: 1fr; }
-    .brands { gap: 8px 16px; }
-    .b-diesel { font-size: 19px; }
-    .b-rayban { font-size: 23px; }
-    .b-persol { font-size: 16px; }
   }
 
   /* =============== ANIMATIONS =============== */
@@ -261,7 +246,6 @@
   .cats li:nth-child(2) { animation: popIn .55s .48s cubic-bezier(.2,.8,.3,1) backwards; }
   .cred:nth-child(1) { animation: fadeUp .5s .68s ease-out backwards; }
   .cred:nth-child(2) { animation: fadeUp .5s .78s ease-out backwards; }
-  .brands { animation: fadeIn .7s .9s ease-out backwards; }
 
   /* حركة مستمرة هادية */
   .badge      { animation: floaty 5.5s 1.2s ease-in-out infinite; }
@@ -323,9 +307,12 @@
       <path d="M100 44c13-12 27-12 40 0"/><path d="M26 30L4 14M214 30l22-16"/>
     </svg>
 
-    <div>
+    <div class="hero-info">
       <h1 class="logo">رامي المغربي</h1>
-      <p class="tag">أحدث صيحات النظارات</p>
+      <div class="taglines">
+        <p class="tag">أخصائي بصريات</p>
+        <p class="tag2">متخصصون في تجهيز النظارات الطبية</p>
+      </div>
     </div>
 
     <ul class="cats">
@@ -357,11 +344,6 @@
       </div>
     </div>
 
-    <div class="brands" aria-label="الماركات">
-      <span class="b-diesel">DIESEL</span>
-      <span class="b-rayban">Ray-Ban</span>
-      <span class="b-persol">PERSOL</span>
-    </div>
   </section>
 
 </main>
@@ -402,3 +384,14 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
